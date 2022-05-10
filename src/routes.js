@@ -1,3 +1,4 @@
+import { Footer } from 'components/Footer';
 import { Menu } from 'components/Menu';
 import { PaginaPadrao } from 'components/PaginaPadrao';
 import Cardapio from 'Pages/Cardapio';
@@ -19,6 +20,8 @@ export function AppRouter() {
           </Route>
         </Routes>
       </BrowserRouter>
+
+      <Footer/>
     </main>
   );
 }

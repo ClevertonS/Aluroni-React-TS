@@ -4,12 +4,14 @@ import casaImg from 'assets/sobre/casa.png';
 import massa1Img from 'assets/sobre/massa1.png';
 import massa2Img from 'assets/sobre/massa2.png';
 
+const imagens = [massa1Img, massa2Img];
+
 export function Sobre() {
   return (
     <section>
       <h3 className={stylesTema.titulo}>Sobre</h3>
       <div className={styles.sobreNos}>
-        <img src={casaImg} alt="Casa Aluroni" />
+        <img src={casaImg} alt='Casa Aluroni' />
         <div className={styles.sobreNos__texto}>
           <p>
             Nós do Aluroni oferecemos a vocês, nossos queridos clientes, a Massa
@@ -30,7 +32,11 @@ export function Sobre() {
         </div>
       </div>
       <div className={styles.imagens}>
-
+        {imagens.map((imagem, index) => (
+          <div key={index} className={styles.imagens__imagem}>
+            <img src={imagem} alt='imagem de massa' />
+          </div>
+        ))}
       </div>
     </section>
   );
