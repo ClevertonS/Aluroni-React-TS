@@ -3,6 +3,7 @@ import styles from './inicio.module.scss';
 import stylesTema from 'styles/tema.module.scss';
 import nossa_casa from 'assets/nossa_casa.png';
 import { useNavigate } from 'react-router-dom';
+import { Cardapio } from 'types/prato';
 
 export function Inicio() {
   let pratosRecomendados = [...cardapio];
@@ -12,7 +13,7 @@ export function Inicio() {
   
   const navigate = useNavigate();
 
-  function RedirecionarParaDetalhes(prato: typeof cardapio[0]) {
+  function RedirecionarParaDetalhes(prato: Cardapio[0]) {
     navigate(`/prato/${prato.id}`, { state: { prato } });
   }
 
